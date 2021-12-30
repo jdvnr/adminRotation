@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>{{cluster}}'s Admin Rotation</h2>
+      <ul class="list-group mb-3">
+          {% for user in rotationList %}
+              <li class="list-group-item justify-content-between">
+                  <div>
+                    <h6 class="my-0">{{user.name}}</h6>
+                    <small class="text-muted">{{user.email}}</small>
+                  </div>
+              </li>
+          {% endfor %}
+      </ul>
+
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Edit Admin List</a></li>-
+      <li class="list-inline-item"><a href="#">Report Bug</a></li>
+    </ul>
+{% endblock %}

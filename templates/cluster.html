@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>{{cluster}}'s Admin Rotation</h2>
+  <ul class="list-group mb-3">
+  <li class="list-group-item justify-content-between">
+    <div>
+      <h6 class="my-0">Jayadev Nair</h6>
+      <small class="text-muted">jvasanth@mathworks.com</small>
+    </div>
+  </li>
+  <div class="p-4">
+    <h4>Next in line..</h4>
+    <li class="list-group-item justify-content-between bg-light">
+        <h6 class="my-0">Lekshmi Prathap</h6>
+        <small class="text-muted">lprathap@mathworks.com</small>
+    </li>
+  </div>
+  </ul>
+
+<ul class="list-inline">
+  <li class="list-inline-item"><a href="{{ url_for('rotation_list_page', cluster=cluster) }}">View Admin List</a></li>-
+  <li class="list-inline-item"><a href="#">Rotate</a></li>-
+  <li class="list-inline-item"><a href="#">Report Bug</a></li>
+</ul>
+{% endblock %}

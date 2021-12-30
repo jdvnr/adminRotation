@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Admin Rotation</h2>
+    <p class="lead">Welcome to cluster admin rotation app. Head over to /cluster or enter your cluster name below to see your cluster's rotation information.</p>
+    <form class="card p-2" method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="input-group">
+            {{ form.name(class="form-control form-control-lg", placeholder ="Cluster Name") }}
+            {{ form.submit(class="btn btn-outline-info") }}
+             <!-- <input type="text" class="form-control" placeholder="Cluster Name">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-secondary">Go</button>
+              </div> -->
+        </div>
+    </form>
+{% endblock %}
